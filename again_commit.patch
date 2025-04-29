@@ -1,0 +1,312 @@
+Subject: [PATCH] again commit
+---
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/.idea/.gitignore	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/.idea/misc.xml	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.13 (proyecto python)" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/.idea/modules.xml	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/proyecto python.iml" filepath="$PROJECT_DIR$/.idea/proyecto python.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/proyecto python.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/proyecto python.iml b/.idea/proyecto python.iml
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/.idea/proyecto python.iml	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.13 (proyecto python)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/.idea/vcs.xml	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: proyecto tareas/funciones.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/proyecto tareas/funciones.py b/proyecto tareas/funciones.py
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/proyecto tareas/funciones.py	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,17 @@
++def get_todos(filepath="todos.txt"):
++    """Read a textfile and
++    return the list of to-do items
++    """
++    with open(filepath, 'r') as file:
++        todos_local = file.readlines()
++    return todos_local
++
++
++def write_todos(todos_arg, filepath="todos.txt"):
++    """Write the to-do items list in the text file."""
++    with open(filepath, 'w') as file:
++        file.writelines(todos_arg)
++
++if __name__ == "__main__":
++    print("hello")
++    print(get_todos())
+\ No newline at end of file
+Index: proyecto tareas/gui.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/proyecto tareas/gui.py b/proyecto tareas/gui.py
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/proyecto tareas/gui.py	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,63 @@
++from funciones import get_todos,write_todos
++import FreeSimpleGUI as sg
++
++label = sg.Text("Escribe una tarea")
++input_box = sg.InputText(tooltip="Enter todo", key="tarea")
++boton_añadir = sg.Button("Añadir")
++impresion_lista = sg.Listbox(values=get_todos(),key=('tareas'),
++                             enable_events =True, size=[45,10])
++boton_editar = sg.Button("editar")
++boton_completar = sg.Button("completada")
++boton_salida = sg.Button("salida")
++
++
++putamadre = sg.Window('Lista de tareas',
++                      layout =[[label],[input_box,boton_añadir],
++                               [impresion_lista,boton_editar, boton_completar],
++                               [boton_salida]],
++                      font =('Helvetica',20))
++
++while True:
++    momento,valores = putamadre.read()
++    print(1,momento)
++    print(2,valores)
++    print(3,valores['tarea'])
++    match momento:
++        case "Añadir":
++            tarea = get_todos()
++            nueva_tarea= valores['tarea'] + "\n"
++            tarea.append(nueva_tarea)
++            write_todos(tarea)
++            putamadre["tareas"].update(values=tarea)
++
++        case "editar":
++            tarea_editada = valores['tareas'][0]
++            nueva_tarea = valores['tarea']+'\n'
++            tareas = get_todos()
++            index = tareas.index(tarea_editada)
++            tareas[index] = nueva_tarea
++            write_todos(tareas)
++            putamadre["tareas"].update(values=tareas)
++
++        case "completada":
++            tareas_a_completar = valores['tareas'][0]
++            tareas = get_todos()
++            tareas.remove(tareas_a_completar)
++            write_todos(tareas)
++            putamadre["tareas"].update(values=tareas)
++            putamadre["tarea"].update(value='')
++
++        case "salida":
++            break
++
++        case 'tareas':
++            putamadre['tarea'].update(value=valores['tareas'][0])
++
++        case sg.WIN_CLOSED:
++            break
++
++putamadre.close()
++
++
++
++
+Index: proyecto tareas/todoproyect.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/proyecto tareas/todoproyect.py b/proyecto tareas/todoproyect.py
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/proyecto tareas/todoproyect.py	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,81 @@
++import modulos.funciones
++import time
++
++now = time.strftime("%b %d, %Y %H:%M:%S")
++print("It is",now)
++
++while True:
++    usuario = input("type add, show, complete, edit or exit: ")
++    usuario = usuario.strip()
++
++
++    if usuario.startswith("add"):
++        todo = usuario[4:]
++
++        todos = modulos.funciones.get_todos()
++
++        todos.append(todo+'\n')
++
++        funciones.write_todos(todos)
++
++
++    elif usuario.startswith("show"):
++        todos =  funciones.get_todos()
++
++        for index,item in enumerate(todos):
++            item = item.strip('\n')
++            row = f"{index+1}.-{item}"
++            print(row)
++
++
++    elif usuario.startswith("edit"):
++        try:
++
++            nume = int(usuario[5:])
++            print(nume)
++            nume = nume - 1
++
++
++            todos = funciones.get_todos()
++
++            new_todo = input("Enter new todo: ")
++            todos[nume] = new_todo + '\n'
++
++            funciones.write_todos(todos)
++
++        except ValueError:
++            print("your commmand is not valid.")
++            continue
++
++
++    elif usuario.startswith("complete"):
++        try:
++            numero = int(usuario[9:])
++
++            todos =  funciones.get_todos()
++            index = numero -1
++            todo_to_remove = todos[index].strip('\n')
++            todos.pop(index)
++
++            funciones.write_todos(todos)
++
++            message = f"el todo {todo_to_remove} fue removido de la lista"
++            print(message)
++        except IndexError:
++            print("there is no item with that number.")
++            continue
++
++
++
++    elif usuario.startswith("exit"):
++        break
++
++    else:
++        print("comand is not valid")
++
++
++
++print("bye cabrones")
++
++
++
+Index: proyecto tareas/todos.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/proyecto tareas/todos.txt b/proyecto tareas/todos.txt
+new file mode 100644
+--- /dev/null	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
++++ b/proyecto tareas/todos.txt	(revision d7b81fcdbcdda33fe34d410a7cc1a232b6f2bb34)
+@@ -0,0 +1,4 @@
++si sirve co�o
++que rayos
++ahora
++vamos a ser los mejores
