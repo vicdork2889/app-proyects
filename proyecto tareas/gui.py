@@ -2,7 +2,6 @@ from funciones import get_todos,write_todos
 import FreeSimpleGUI as sg
 
 label = sg.Text("Escribe una tarea")
-print('cometela')
 input_box = sg.InputText(tooltip="Enter todo", key="tarea")
 boton_añadir = sg.Button("Añadir")
 impresion_lista = sg.Listbox(values=get_todos(),key=('tareas'),
